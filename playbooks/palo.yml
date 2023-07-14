@@ -1,0 +1,7 @@
+      - name: Wait for FW reboot
+        panos_check:
+          provider: '{{ provider }}'
+        register: result
+        until: not result|failed
+        retries: 50
+        delay: 5
