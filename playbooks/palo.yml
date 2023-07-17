@@ -14,10 +14,11 @@
         api_key: LUFRPT1xR2ZJb3ZPVFVBSHBqL0FaMTBsakpick1yS3c9MkQ3cGJ3b1F6b1AvSzNjUlBYSDI4ZktvdVR0SSsycVpuUDY3UVI4N1pnSENGc2k1U01abUNObXBOY2NoSHo2UA==
 
     tasks:
+# Wait 2 minutes, then check every 5 seconds for 10 minutes.    
       - name: Wait for FW reboot
-          panos_check:
-              provider: '{{ palo_provider }}'
-          register: result
-          until: not result|failed
-          retries: 50
-          delay: 5
+          panos_check :
+            provider: '{{ palo_provider }}'
+            register: result
+            until: not result|failed
+            retries: 50
+            delay: 5
