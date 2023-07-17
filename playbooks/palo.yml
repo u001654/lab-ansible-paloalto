@@ -1,6 +1,17 @@
+---
+
+- name: Palo Alto Playbook
+  hosts: palo-alto
+  gather_facts: false
+  connection: local
+
+  collections: 
+    - paloaltonetworks.panos
+
+  tasks:
       - name: Wait for FW reboot
         panos_check:
-          provider: '{{ provider }}'
+          provider: '{{ palo_provider }}'
         register: result
         until: not result|failed
         retries: 50
