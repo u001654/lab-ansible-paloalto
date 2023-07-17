@@ -16,8 +16,8 @@
     tasks:
       - name: Wait for FW reboot
           panos_check:
-          provider: '{{ palo_provider }}'
+              provider: '{{ palo_provider }}'
           register: result
-            until: not result|failed
-            retries: 50
-            delay: 5
+          until: not result|failed
+          retries: 50
+          delay: 5
