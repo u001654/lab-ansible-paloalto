@@ -1,10 +1,9 @@
 ---
 
-- name: Palo Alto Playbook
-  all:
+  - name: Palo Alto Playbook
     hosts: all
-  gather_facts: false
-  connection: local
+    gather_facts: false
+    connection: local
 
   collections: 
     - paloaltonetworks.panos
