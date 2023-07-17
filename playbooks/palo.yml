@@ -1,7 +1,7 @@
 ---
 
 - name: Palo Alto Playbook
-  hosts: palo-alto
+  hosts: all
   gather_facts: false
   connection: local
 
