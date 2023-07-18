@@ -1,2 +1,2 @@
 [paloalto]
-fw-lab ansible_host=192.168.252.9 ansible_connection=ssh  ansible_user=svc_ansible ansible_pass=Mudar@123 host_key_checking=False ansible_ssh_private_key_file=home/ec2-user/.ssh/svc_ansible
+fw-lab ansible_host=192.168.252.9 ansible_connection=ssh  ansible_user=svc_ansible ansible_pass=Mudar@123 host_key_checking=False ansible_ssh_private_key_file=home/ec2-user/.ssh
