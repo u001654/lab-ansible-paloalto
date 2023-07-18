@@ -1,3 +1,2 @@
 [paloalto]
 fw-lab ansible_host=192.168.252.9 ansible_connection=ssh  ansible_user=svc_ansible ansible_pass=Mudar@123 host_key_checking=False
-host_key_checking=False
