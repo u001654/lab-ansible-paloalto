@@ -8,10 +8,6 @@
     collections: 
       - paloaltonetworks.panos
 
-    vars:
-      palo_provider:
-        api_key: '{{ palo_provider }}'
-
     tasks:
 # Wait 2 minutes, then check every 5 seconds for 10 minutes.
       - name: check if ready
