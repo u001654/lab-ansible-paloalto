@@ -5,6 +5,9 @@
     gather_facts: false
     connection: local
 
+    collections:
+      - paloaltonetworks.panos
+
     vars:
       palo_provider: 
         username: svc_ansible
