@@ -16,8 +16,7 @@
         ip_address: 192.168.252.9
 
     tasks:
-      - name: Get the system info
-        paloaltonetworks.panos.panos_op:
+      - name: check if ready
+        panos_check:
           provider: '{{ palo_provider }}'
-          cmd: 'show system info'
-          register: res
+          timeout: 0
