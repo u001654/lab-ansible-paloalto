@@ -1,5 +1,6 @@
 ---
 
 configs_dir: ./configs/
-
+ansible_ssh_user: svc_ansible
+ansible_ssh_pass: Mudar@123
 api_key: LUFRPT1xR2ZJb3ZPVFVBSHBqL0FaMTBsakpick1yS3c9MkQ3cGJ3b1F6b1AvSzNjUlBYSDI4ZktvdVR0SSsycVpuUDY3UVI4N1pnSENGc2k1U01abUNObXBOY2NoSHo2UA==
