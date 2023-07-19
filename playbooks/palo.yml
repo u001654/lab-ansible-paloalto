@@ -17,11 +17,11 @@
 
     tasks:
       - name: Get the system info
-          paloaltonetworks.panos.panos_op:
-            provider: '{{ palo_provider }}'
-            cmd: 'show system info'
+        paloaltonetworks.panos.panos_op:
+          provider: '{{ palo_provider }}'
+          cmd: 'show system info'
           register: res
 
-        - name: Show the system info
-          ansible.builtin.debug:
-            msg: '{{ res.stdout }}'
+      - name: Show the system info
+        ansible.builtin.debug:
+        msg: '{{ res.stdout }}'
