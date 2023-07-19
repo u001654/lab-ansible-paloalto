@@ -19,4 +19,9 @@
       - name: check if ready
         panos_check:
           provider: '{{ palo_provider }}'
-          timeout: 0
+          cmd: 'show chassis-ready'
+        changed_when: false
+        register: result
+        until: result is not failed and (result.stdout | from_json).response.result == 'yes'
+        retries: 50
+        delay: 30
