@@ -23,5 +23,5 @@
           register: res
 
       - name: Show the system info
-        ansible.builtin.debug:
-        msg: '{{ res.stdout }}'
+          ansible.builtin.debug:
+          msg: '{{ res.stdout }}'
