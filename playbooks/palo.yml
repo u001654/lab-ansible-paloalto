@@ -3,6 +3,8 @@
   - name: Palo Alto Playbook
     hosts: paloalto
     gather_facts: false
+    vars:
+      ansible_python_interpreter = /usr/bin/python3
     connection: local
 
     collections:
