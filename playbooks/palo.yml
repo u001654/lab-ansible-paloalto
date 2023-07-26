@@ -33,5 +33,7 @@
       - name: check if ready
         panos_check:
           provider: '{{ palo_provider }}'
+        register: result
+        until: result|failed
         retries: 3
         delay: 5
