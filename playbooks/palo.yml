@@ -37,8 +37,6 @@
       - name: check if ready
         panos_check:
           provider: '{{ palo_provider }}'
-        debug:
-          msg:
         retries: 3
         delay: 5
 
