@@ -20,6 +20,11 @@
       - vars.yml
 
     tasks:
+      - name: show system info
+        panos_op:
+          provider: '{{ palo_provider }}'
+          cmd: 'show system info'
+          
       - name: check if ready
         panos_check:
           provider: '{{ palo_provider }}'
