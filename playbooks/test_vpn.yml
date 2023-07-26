@@ -20,6 +20,14 @@
       - vars.yml
 
     tasks:
+
+      - name: show vpn flow Before
+        panos_op:
+          provider: '{{ palo_provider }}'
+          cmd: 'show vpn flow'
+        register: vpn_flow
+      - debug: var=vpn_flow.stdout
+
       - name: test vpn
         panos_op:
           provider: '{{ palo_provider }}'
@@ -27,7 +35,7 @@
         register: test_vpn
       - debug: var=test_vpn.stdout
 
-      - name: show vpn flow
+      - name: show vpn flow After
         panos_op:
           provider: '{{ palo_provider }}'
           cmd: 'show vpn flow'
