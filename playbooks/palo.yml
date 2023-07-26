@@ -35,11 +35,11 @@
       - name: check if ready
         panos_check:
           provider: '{{ palo_provider }}'
-        register: check_firewall
-        until: result is not failed
+        #register: check_firewall
+        #until: result is not failed
         retries: 3
         delay: 5
 
       - debug: var=system_info.stdout_lines
       - debug: var=chassis_ready.stdout_lines
-      - debug: var=check_firewall.stdout_lines
+      #- debug: var=check_firewall.stdout_lines
