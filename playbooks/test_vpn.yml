@@ -32,4 +32,4 @@
           provider: '{{ palo_provider }}'
           cmd: 'show vpn flow'
         register: vpn_flow
-      - debug: var=vpn_flow.stdout
+      - debug: var=vpn_flow.stdout_lines
