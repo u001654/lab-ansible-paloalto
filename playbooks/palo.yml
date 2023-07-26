@@ -24,7 +24,7 @@
         panos_op:
           provider: '{{ palo_provider }}'
           cmd: 'show system info'
-          
+
       - name: check if ready
         panos_check:
           provider: '{{ palo_provider }}'
@@ -32,5 +32,5 @@
         changed_when: false
         register: result
         until: result is not failed and (result.stdout | from_json).response.result == 'yes'
-        retries: 50
-        delay: 30
+        retries: 3
+        delay: 5
