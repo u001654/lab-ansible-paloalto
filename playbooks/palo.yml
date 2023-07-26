@@ -25,10 +25,14 @@
           provider: '{{ palo_provider }}'
           cmd: 'show system info'
 
+      - name: show system info
+        panos_op:
+          provider: '{{ palo_provider }}'
+          cmd: 'show chassis-ready'
+          
       - name: check if ready
         panos_check:
           provider: '{{ palo_provider }}'
-          cmd: 'show chassis-ready'
         changed_when: false
         register: result
         until: result is not failed and (result.stdout | from_json).response.result == 'yes'
