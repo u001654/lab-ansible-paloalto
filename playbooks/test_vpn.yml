@@ -20,9 +20,16 @@
       - vars.yml
 
     tasks:
-      - name: show system info
+      - name: test vpn
         panos_op:
           provider: '{{ palo_provider }}'
           cmd: 'test vpn ipsec-sa tunnel vpn_test_fw_lab'
         register: test_vpn
       - debug: var=test_vpn.stdout_lines
+
+      - name: show vpn flow
+        panos_op:
+          provider: '{{ palo_provider }}'
+          cmd: 'show vpn flow'
+        register: vpn_flow
+      - debug: var=vpn_flw.stdout_lines
