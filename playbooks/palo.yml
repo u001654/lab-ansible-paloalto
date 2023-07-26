@@ -36,6 +36,7 @@
         panos_check:
           provider: '{{ palo_provider }}'
         register: check_firewall
+        until: result is not failed
         retries: 3
         delay: 5
 
