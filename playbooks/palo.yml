@@ -24,16 +24,21 @@
         panos_op:
           provider: '{{ palo_provider }}'
           cmd: 'show system info'
-
-      - name: show system info
+        register: system_info
+        
+      - name: show chassis-ready
         panos_op:
           provider: '{{ palo_provider }}'
           cmd: 'show chassis-ready'
-          
+        register: chassis_ready
+
       - name: check if ready
         panos_check:
           provider: '{{ palo_provider }}'
-        register: result
-        until: not result|failed
+        register: check_firewall
         retries: 3
         delay: 5
+
+      - debug: var=system_info.stdout_lines
+      - debug: var=chassis_ready.stdout_lines
+      - debug: var=check_firewall.stdout_lines
