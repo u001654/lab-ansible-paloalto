@@ -22,14 +22,14 @@
           provider: '{{ palo_provider }}'
           cmd: 'show system info'
         register: system_info
-      - debug: var=system_info.stdout
+      - debug: var=system_info.stdout_lines
         
       - name: show chassis-ready
         panos_op:
           provider: '{{ palo_provider }}'
           cmd: 'show chassis-ready'
         register: chassis_ready
-      - debug: var=chassis_ready.stdout
+      - debug: var=chassis_ready.stdout_lines
 
       - name: check if ready
         panos_check:
