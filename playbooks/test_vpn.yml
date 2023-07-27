@@ -31,7 +31,7 @@
           cmd: 'test vpn ipsec-sa tunnel vpn_test_fw_lab'
         register: test_vpn
       - debug:
-          msg: "{{ test_vpn.stdout_lines }}"
+          msg: "{{ test_vpn.stdout_line.json }}"
 
       - name: show vpn flow After
         panos_op:
