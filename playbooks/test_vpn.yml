@@ -23,18 +23,23 @@
           provider: '{{ palo_provider }}'
           cmd: 'show vpn flow'
         register: vpn_flow
-      - debug: var=vpn_flow.stdout_lines
+      - debug: var=vpn_flow.stdout
 
       - name: test vpn
         panos_op:
           provider: '{{ palo_provider }}'
           cmd: 'test vpn ipsec-sa tunnel vpn_test_fw_lab'
         register: test_vpn
-      - debug: var=test_vpn.stdout_lines
+      - debug:
+        msg: "{{ test_vpn.stdout_lines }}"
 
       - name: show vpn flow After
         panos_op:
           provider: '{{ palo_provider }}'
           cmd: 'show vpn flow'
-        register: vpn_flow
-      - debug: msg="{{var=vpn_flow.stdout}}"
+        register: vpn_flow_after
+      #- debug: msg="{{var=vpn_flow.stdout}}"
+
+      - name: outputs after
+        ansible.builtin.debug:
+          var: vpn_flow_after
