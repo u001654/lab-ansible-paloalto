@@ -1,7 +1,7 @@
 [all:vars]
 # Username for ssh connection
-ansible_user='svc_ansible'
-ansible_pass='Mudar@123'
+#ansible_user='svc_ansible'
+#ansible_pass='Mudar@123'
 # Run commands as root user?  
 #ansible_become='yes'
 # How do I become root user? Use sudo. 

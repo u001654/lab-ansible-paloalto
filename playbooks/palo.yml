@@ -9,13 +9,6 @@
     collections:
       - paloaltonetworks.panos
 
-    vars:
-      palo_provider: 
-        username: svc_ansible
-        password: Mudar@123
-        api_key: LUFRPT1xR2ZJb3ZPVFVBSHBqL0FaMTBsakpick1yS3c9MkQ3cGJ3b1F6b1AvSzNjUlBYSDI4ZktvdVR0SSsycVpuUDY3UVI4N1pnSENGc2k1U01abUNObXBOY2NoSHo2UA==
-        ip_address: 192.168.252.9
-
     vars_files:
       - vars.yml
 
