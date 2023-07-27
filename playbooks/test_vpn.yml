@@ -10,7 +10,7 @@
       - paloaltonetworks.panos
 
     vars_files:
-      - vars.yml
+      - inventario/group_vars/vars.yml
 
     tasks:
 
