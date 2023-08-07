@@ -30,7 +30,7 @@
           provider: '{{ palo_provider }}'
           cmd: 'test vpn ipsec-sa tunnel vpn_test_fw_lab'
         register: test_vpn
-      - debug: var=vpn_flow.stdout_xml
+      - debug: var=test_vpn.stdout_xml
 
       - name: show vpn flow After
         panos_op:
