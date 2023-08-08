@@ -38,3 +38,7 @@
           cmd: 'show vpn flow'
         register: vpn_flow_after
       - debug: var=vpn_flow_after.stdout_xml
+
+      - name: display vpn status
+        ansible.builtin.debug:
+          msg: '{{ vpn_flow_after.stdout | from_json }}'
