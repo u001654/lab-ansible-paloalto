@@ -23,7 +23,7 @@
           provider: '{{ palo_provider }}'
           cmd: 'show vpn flow'
         register: vpn_flow
-      - debug: var=vpn_flow.stdout_xml
+      - debug: var=vpn_flow.stdout
 
       - name: test vpn
         panos_op:
@@ -37,8 +37,4 @@
           provider: '{{ palo_provider }}'
           cmd: 'show vpn flow'
         register: vpn_flow_after
-      - debug: var=vpn_flow_after.stdout_xml
-
-      - name: display vpn status
-        ansible.builtin.debug:
-          msg: '{{ vpn_flow_after.stdout | from_json }}'
+      - debug: var=vpn_flow_after.stdout_lines
