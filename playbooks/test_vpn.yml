@@ -10,7 +10,7 @@
       - paloaltonetworks.panos
 
     vars_file:
-      - vars.yml
+      - inventario/group_vars/vars.yml
 
     # vars:
     #   palo_provider: 
