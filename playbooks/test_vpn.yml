@@ -28,7 +28,7 @@
         register: vpn_flow
       - debug: var=vpn_flow.stdout_xml
 
-      - name: Reset VPN
+      - name: Reset_VPN
         panos_vpn_tunnel:
           provider: '{{ palo_provider }}'
           validate_certs: no
