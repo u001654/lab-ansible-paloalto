@@ -1,18 +1,2 @@
-[all:vars]
-# Username for ssh connection
-#ansible_user='svc_ansible'
-#ansible_pass='Mudar@123'
-# Run commands as root user?  
-#ansible_become='yes'
-# How do I become root user? Use sudo. 
-#ansible_become_method='sudo'
-# Password for sudo
-#ansible_become_pass='superSecretPassword' 
-###################################################
-# Password for sudo user i.e. ansible_user password
-# See https://www.cyberciti.biz/faq/how-to-set-and-use-sudo-password-for-ansible-vault/
-# Read it from an encrypted file
-# ansible_become_pass='{{ my_sudo_password }}' 
-###################################################
 [paloalto]
 fw-lab ansible_host=192.168.252.9
