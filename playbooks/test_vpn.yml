@@ -9,8 +9,8 @@
     collections:
       - paloaltonetworks.panos
 
-    # vars_file:
-    #   - vars.yml
+    vars_file:
+      - vars.yml
 
     # vars:
     #   palo_provider: 
