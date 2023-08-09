@@ -2,9 +2,10 @@
 
   - name: Palo Alto Playbook
     hosts: paloalto
+    gather_facts: false
+
     vars_file:
       - inventario/group_vars/vars.yml
-    gather_facts: false
 
     connection: local
 
