@@ -1,4 +1,7 @@
 ---
+  palo_alto_usarname: svc_ansible
+  palo_alto_password: Mudar@123
+  
   palo_provider: 
     username: svc_ansible
     password: Mudar@123
