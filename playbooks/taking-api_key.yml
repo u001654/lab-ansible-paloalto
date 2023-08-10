@@ -16,7 +16,7 @@
       - name: retrive api_key
         uri:
           url: "https://{{ ansible_host }}/api/?type=keygen&user={{ palo_alto_usarname }}&password={{ palo_alto_password }}"
-          #method: POST
+          method: POST
           #status_code: 200
           validate_certs: no
         register: api_key
