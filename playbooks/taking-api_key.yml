@@ -2,6 +2,8 @@
 
   - name: Palo Alto Playbook
     hosts: paloalto
+    vars_files:
+    - ./vars/vars.yml
     gather_facts: false
 
     connection: local
@@ -13,9 +15,7 @@
 
       - name: retrive api_key
         panos_op:
-          provider:
-            username: svc_ansible
-            password: Mudar@123
+          provider: '{{ palo_provider }}'
           register: auth
       - debug: var=auth.stdout_xml
 
