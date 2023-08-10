@@ -26,4 +26,4 @@
       
       - name: Mostrar api_key
         debug:
-          var: api_key
+          var: api_key.stdout_lines
