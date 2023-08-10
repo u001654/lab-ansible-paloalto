@@ -21,4 +21,4 @@
           validate_certs: no
         register: auth
         changed_when: false
-      - debug: var=auth.stdout_xml
+      - debug: var=auth
