@@ -21,7 +21,7 @@
         #   body_format: json
         #   #status_code: 200
         #   validate_certs: no
-         register: api_key
+        register: api_key
         # changed_when: false
       
       - name: Mostrar api_key
