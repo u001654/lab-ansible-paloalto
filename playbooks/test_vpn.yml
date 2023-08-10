@@ -19,18 +19,6 @@
           cmd: 'show vpn flow'
         register: vpn_flow
       - debug: var=vpn_flow.stdout_xml
-
-      # - name: ResetVPN
-      #   panos_vpn_tunnel:
-      #     provider: '{{ palo_provider }}'
-      #     validate_certs: no
-      #     state: reset
-      #   delegate_to: localhost
-      #   register: vpn_reset_result
-      
-      # - name: Check if VPN reset was sucessful
-      #   debug:
-      #     var: vpn_reset_result
       
       - name: Reset VPN
         panos_op:

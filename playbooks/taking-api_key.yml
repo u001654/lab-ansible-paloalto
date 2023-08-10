@@ -1,0 +1,24 @@
+---
+
+  - name: Palo Alto Playbook
+    hosts: paloalto
+    gather_facts: false
+
+    connection: local
+
+    collections:
+      - paloaltonetworks.panos
+    
+    tasks:
+
+      - name: retrive api_key
+        panos_op:
+          provider:
+            username: svc_ansible
+            password: Mudar@123
+          register: auth
+      - debug: var=auth.stdout_xml
+
+
+
+  
