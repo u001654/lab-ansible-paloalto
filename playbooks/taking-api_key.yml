@@ -15,14 +15,7 @@
 
       - name: retrive api_key
         shell:  curl -k -X GET  'https://{{ ansible_host }}/api/?type=keygen&user={{ palo_alto_usarname }}&password={{ palo_alto_password }}'
-        # uri:
-        #   url: "https://{{ ansible_host }}/api/?type=keygen&user={{ palo_alto_usarname }}&password={{ palo_alto_password }}"
-        #   method: GET
-        #   body_format: json
-        #   #status_code: 200
-        #   validate_certs: no
         register: api_key
-        # changed_when: false
       
       - name: Mostrar api_key
         debug:
